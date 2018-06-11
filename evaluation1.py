@@ -10,13 +10,13 @@ import numpy
 
 import linewriter
 
-system_output = sys.argv[1]
-gold_standard = sys.argv[2]
-threshold = int(sys.argv[3])
-proskey = sys.argv[4]
-conskey = sys.argv[5]
-eval_out = sys.argv[6]
-aggr_eval_out = sys.argv[7]
+system_output = sys.argv[1] # system output in .json
+gold_standard = sys.argv[2] # human gold standard (.json)
+threshold = int(sys.argv[3]) # between 0 and 100
+proskey = sys.argv[4] # to extract pros from .json system output
+conskey = sys.argv[5] # to extract cons from .json system output
+eval_out = sys.argv[6] # .json file
+aggr_eval_out = sys.argv[7] # .csv file
 
 review_predictions = defaultdict(list)
 review_txt = {}

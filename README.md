@@ -5,9 +5,12 @@ The scripts 'baseline.py' and 'synpat.py' are implementations of two of the syst
 
 ### Usage of baseline.py
 
-python baseline.py train.json dev.json test.json predictions.json
+python baseline.py train.json dev.json test.json baseline_predictions.json
 
 ### usage of synpat.py
 
-python synpat.py test.json duoman.txt predictions.txt predictions_sentences.txt 1
+python synpat.py test.json duoman.txt synpat_predictions.txt synpat_predictions.json
 
+### usage of evaluation1.py
+
+python evaluation1.py synpat_predictions.json human_gold_standard.json 70 pattern_pros pattern_cons pattern_results.json pattern_results_summary.csv
